@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && mv out/* ../ && rm -d out",
+    "build": "next build && touch out/.nojekyll && echo 'skycolorsfmcg.com' > out/CNAME",
     "start": "next start",
     "lint": "next lint"
   },
