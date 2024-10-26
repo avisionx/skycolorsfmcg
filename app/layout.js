@@ -9,11 +9,11 @@ const font = Raleway({
   variable: '--font-raleway',
 });
 
-
 export const metadata = {
   title: {
     template: `%s | SKY COLORS FMCG - Global Wholesale Distributor of Quality Food & Personal Care Products`,
-    default: 'SKY COLORS FMCG - Global Wholesale Distributor of Quality Food & Personal Care Products',
+    default:
+      'SKY COLORS FMCG - Global Wholesale Distributor of Quality Food & Personal Care Products',
   },
   description:
     'SKY COLORS FMCG is a leading global distributor of high-quality food, non-food, personal care, and toiletries products. Headquartered in Dubai, we deliver top-notch FMCG products worldwide, ensuring reliability, integrity, and exceptional service to our customers and partners.',
@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body
-        className={`${font.className} antialiased min-h-[100dvh] flex flex-col`}
+        className={`${font.className} flex min-h-[100dvh] flex-col antialiased`}
       >
         <Navbar />
         {children}
