@@ -5,6 +5,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import LOGO from '@/assets/sky-colors-logo.png';
 import { Button } from '@/components/ui/button';
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from '@/components/ui/drawer';
+import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,6 +55,29 @@ export default function Navbar() {
               Get in Touch
             </Button>
           </Link>
+        </div>
+        <div className='ml-auto flex items-center lg:hidden'>
+          <Drawer>
+            <DrawerTrigger>
+              <HamburgerMenuIcon className='size-7 text-black/80' />
+            </DrawerTrigger>
+            <DrawerContent>
+              <div className='flex flex-col gap-4 px-5 py-4'>
+                <div className='text-center'>
+                  <Link href='/'>Home</Link>
+                </div>
+                <div className='text-center'>
+                  <Link href='/about'>About</Link>
+                </div>
+                <div className='text-center'>
+                  <Link href='/products'>Products</Link>
+                </div>
+                <div className='text-center'>
+                  <Link href='/contact-us'>Get in Touch</Link>
+                </div>
+              </div>
+            </DrawerContent>
+          </Drawer>
         </div>
       </div>
     </nav>
