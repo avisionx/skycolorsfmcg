@@ -11,7 +11,9 @@ import { Vortex } from '@/components/ui/vortex';
 import PRODUCTS_IMG_1 from '@/assets/our-products/food.webp';
 import PRODUCTS_IMG_2 from '@/assets/our-products/personal-care.webp';
 import PRODUCTS_IMG_3 from '@/assets/our-products/household.webp';
-import FeaturesSectionDemo from '@/components/blocks/features-section-demo-3';
+import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
+import { BackgroundLines } from '@/components/ui/background-lines';
+import { Button as MovingBorderButton } from '@/components/ui/moving-border';
 
 export default function Home() {
   return (
@@ -29,7 +31,7 @@ export default function Home() {
               </h2>
               <div className='mt-6 flex gap-x-3'>
                 <Link href='/contact-us'>
-                  <Button className='bg-[#3ab4e7] px-6 py-3 font-bold hover:bg-[#3ab4e7]/90'>
+                  <Button className='bg-[#3ab4e7] bg-gradient-to-r from-[#3ab4e7] to-[#016da2] px-6 py-3 font-bold hover:bg-[#3ab4e7]/90 hover:opacity-90'>
                     Get in Touch
                   </Button>
                 </Link>
@@ -136,7 +138,7 @@ export default function Home() {
           </div>
         </Vortex>
       </div>
-      <div className='mx-auto w-full max-w-[1600px] px-5 py-16'>
+      <div className='mx-auto w-full max-w-[1600px] px-5 pb-20 pt-16'>
         <div className='flex items-center'>
           <p className='text-4xl font-bold text-black/80'>Our Products</p>
           <Link href='/products' className='ml-auto'>
@@ -164,101 +166,131 @@ export default function Home() {
         </div>
       </div>
 
-      <FeaturesSectionDemo />
-
-      {/* TESTIMONIALS SECTION INFINITE MOVING CARD compinent */}
-
-      <div className='bg-white text-gray-900'>
-        {/* Products Section */}
-        <section id='products' className='p-12'>
-          <h2 className='mb-6 text-center text-4xl font-bold'>Our Products</h2>
-          <div className='grid grid-cols-1 gap-6 md:grid-cols-4'>
-            {/* Product Item */}
-            <div className='bg-white p-4 shadow transition hover:shadow-lg'>
-              <Image
-                src='/food-product.jpg'
-                alt='Food Product'
-                width={300}
-                height={200}
-              />
-              <h3 className='mt-4 text-xl font-bold'>Food Products</h3>
-              <p>High-quality, globally sourced food products.</p>
-            </div>
-            <div className='bg-white p-4 shadow transition hover:shadow-lg'>
-              <Image
-                src='/personal-care.jpg'
-                alt='Personal Care'
-                width={300}
-                height={200}
-              />
-              <h3 className='mt-4 text-xl font-bold'>Personal Care</h3>
-              <p>Leading brands for personal care and hygiene.</p>
-            </div>
-            <div className='bg-white p-4 shadow transition hover:shadow-lg'>
-              <Image
-                src='/cleaning.jpg'
-                alt='Non-Food Products'
-                width={300}
-                height={200}
-              />
-              <h3 className='mt-4 text-xl font-bold'>Non-Food Products</h3>
-              <p>Quality products for household and industrial use.</p>
-            </div>
-            <div className='bg-white p-4 shadow transition hover:shadow-lg'>
-              <Image
-                src='/toiletries.jpg'
-                alt='Toiletries'
-                width={300}
-                height={200}
-              />
-              <h3 className='mt-4 text-xl font-bold'>Toiletries</h3>
-              <p>Premium toiletries from global brands.</p>
-            </div>
+      <div className='bg-muted pb-20 pt-16'>
+        <div className='mx-auto w-full max-w-[1600px] px-5'>
+          <div className='flex flex-col items-center'>
+            <p className='text-balance text-center text-4xl font-bold text-black/80'>
+              Our Trusted Partners
+            </p>
+            <hr className='mb-8 mt-3 w-[100px] p-0' />
           </div>
-        </section>
-
-        {/* Global Reach Section */}
-        <section id='global-reach' className='bg-gray-100 p-12 text-center'>
-          <h2 className='mb-6 text-4xl font-bold'>Global Reach</h2>
-          <p className='mx-auto max-w-3xl text-lg'>
-            With a presence in over 50 countries, we ensure seamless
-            distribution across the globe.
-          </p>
-          <div className='relative mt-8'>
+          <div className='grid grid-cols-2 justify-center gap-6 md:grid-cols-3 lg:grid-cols-6'>
             <Image
-              src='/world-map.png'
-              alt='Global Map'
-              width={800}
-              height={400}
-              className='mx-auto'
+              src='https://picsum.photos/300/200'
+              alt=''
+              width={150}
+              height={100}
+              className='w-full rounded-lg'
+            />
+            <Image
+              src='https://picsum.photos/300/200'
+              alt=''
+              width={150}
+              height={100}
+              className='w-full rounded-lg'
+            />
+            <Image
+              src='https://picsum.photos/300/200'
+              alt=''
+              width={150}
+              height={100}
+              className='w-full rounded-lg'
+            />
+            <Image
+              src='https://picsum.photos/300/200'
+              alt=''
+              width={150}
+              height={100}
+              className='w-full rounded-lg'
+            />
+            <Image
+              src='https://picsum.photos/300/200'
+              alt=''
+              width={150}
+              height={100}
+              className='w-full rounded-lg'
+            />
+            <Image
+              src='https://picsum.photos/300/200'
+              alt=''
+              width={150}
+              height={100}
+              className='w-full rounded-lg'
             />
           </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className='bg-blue-600 p-12 text-center text-white'>
-          <h2 className='mb-4 text-4xl font-bold'>Ready to Grow with Us?</h2>
-          <p className='mb-8 text-lg'>
+        </div>
+      </div>
+      <div className='relative flex flex-col items-center justify-center overflow-hidden py-16 antialiased'>
+        <div className='flex flex-col items-center'>
+          <p className='text-balance text-center text-4xl font-bold text-black/80'>
+            What Our Partners Say
+          </p>
+          <hr className='mb-8 mt-3 w-1/3 p-0' />
+        </div>
+        <InfiniteMovingCards
+          items={testimonials}
+          direction='right'
+          speed='slow'
+        />
+      </div>
+      <div className='relative mx-auto mb-20 w-full max-w-[1600px] px-5'>
+        <BackgroundLines className='flex !h-auto w-full flex-col items-center justify-center rounded-2xl bg-slate-100 px-5 pb-36 pt-32 shadow-sm'>
+          <p className='z-20 text-balance text-center text-4xl font-bold text-black/80'>
+            Ready to Grow with Us?
+          </p>
+          <p className='z-20 mt-2 text-pretty text-center font-medium text-gray-500'>
             Partner with SKY COLORS FMCG today for all your FMCG needs.
           </p>
-          <button className='bg-yellow-500 hover:bg-yellow-600'>
-            Contact Us
-          </button>
-        </section>
-
-        {/* Footer */}
-        <footer className='bg-gray-800 p-6 text-center text-white'>
-          <div className='flex justify-center space-x-6'>
-            <a href='#' className='hover:text-yellow-300'>
-              Privacy Policy
-            </a>
-            <a href='#' className='hover:text-yellow-300'>
-              Terms of Service
-            </a>
+          <div className='z-20 mt-10 grid grid-cols-1 items-center gap-6 text-center lg:grid-cols-2'>
+            <Link href='/contact-us'>
+              <MovingBorderButton
+                borderRadius='0.75rem'
+                className='border-none bg-[#3ab4e7] bg-gradient-to-r from-[#3ab4e7] to-[#016da2] p-2 text-[14px] font-bold text-white hover:bg-[#3ab4e7]/90 hover:opacity-90'
+                containerClassName='h-12 w-52'
+              >
+                Get in Touch
+              </MovingBorderButton>
+            </Link>
+            <Link href='/products'>
+              <Button variant='link' className='p-0 text-[16px] font-bold'>
+                Our Products <ArrowRight className='ml-1' />
+              </Button>
+            </Link>
           </div>
-          <p className='mt-4'>© 2024 SKY COLORS FMCG. All rights reserved.</p>
-        </footer>
+        </BackgroundLines>
       </div>
     </>
   );
 }
+
+const testimonials = [
+  {
+    quote:
+      'It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.',
+    name: 'Charles Dickens',
+    title: 'A Tale of Two Cities',
+  },
+  {
+    quote:
+      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
+    name: 'William Shakespeare',
+    title: 'Hamlet',
+  },
+  {
+    quote: 'All that we see or seem is but a dream within a dream.',
+    name: 'Edgar Allan Poe',
+    title: 'A Dream Within a Dream',
+  },
+  {
+    quote:
+      'It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.',
+    name: 'Jane Austen',
+    title: 'Pride and Prejudice',
+  },
+  {
+    quote:
+      'Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.',
+    name: 'Herman Melville',
+    title: 'Moby-Dick',
+  },
+];

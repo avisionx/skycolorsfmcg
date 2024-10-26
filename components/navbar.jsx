@@ -40,7 +40,7 @@ export default function Navbar() {
             </Button>
           </Link>
           <Link href='/contact-us'>
-            <Button className='bg-[#3ab4e7] px-6 py-3 font-bold hover:bg-[#3ab4e7]/90'>
+            <Button className='bg-[#3ab4e7] bg-gradient-to-r from-[#3ab4e7] to-[#016da2] px-6 py-3 font-bold hover:bg-[#3ab4e7]/90 hover:opacity-90'>
               Get in Touch
             </Button>
           </Link>
