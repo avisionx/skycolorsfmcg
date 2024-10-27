@@ -29,17 +29,18 @@ export default function Home() {
                 Delivering high-quality food, non-food, and personal care
                 products worldwide.
               </h2>
-              <div className='mt-6 flex gap-x-3'>
+              <div className='mt-6 flex items-center gap-x-8'>
                 <Link href='/contact-us'>
-                  <Button className='bg-[#3ab4e7] bg-gradient-to-r from-[#3ab4e7] to-[#016da2] px-6 py-3 font-bold hover:bg-[#3ab4e7]/90 hover:opacity-90'>
+                  <MovingBorderButton
+                    borderRadius='0.75rem'
+                    className='border-none bg-[#3ab4e7] bg-gradient-to-r from-[#3ab4e7] to-[#016da2] p-2 text-[14px] font-bold text-white hover:bg-[#3ab4e7]/90 hover:opacity-90'
+                    containerClassName='h-12 w-52'
+                  >
                     Get in Touch
-                  </Button>
+                  </MovingBorderButton>
                 </Link>
                 <Link href='/products'>
-                  <Button
-                    variant='link'
-                    className='ml-4 p-1 px-6 py-3 font-bold'
-                  >
+                  <Button variant='link' className='p-0 text-[16px] font-bold'>
                     Our Products <ArrowRight className='ml-1' />
                   </Button>
                 </Link>
@@ -222,7 +223,7 @@ export default function Home() {
       </div>
       <div className='relative flex flex-col items-center justify-center overflow-hidden py-16 antialiased'>
         <div className='flex flex-col items-center'>
-          <p className='text-balance text-center text-4xl font-bold text-black/80'>
+          <p className='text-balance px-5 text-center text-4xl font-bold text-black/80'>
             What Our Partners Say
           </p>
           <hr className='mb-8 mt-3 w-1/3 p-0' />

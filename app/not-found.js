@@ -21,7 +21,7 @@ export default function NotFound() {
         This page doesn&apos;t exist. Looks like you are lost.
       </p>
       <Link href='/' className='mt-12'>
-        <Button variant='link' className='p-1 px-6 py-3 font-bold'>
+        <Button variant='secondary' className='px-7 py-6 font-bold'>
           Go back Home <ArrowRight className='ml-1' />
         </Button>
       </Link>
