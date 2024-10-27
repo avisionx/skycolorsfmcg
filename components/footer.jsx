@@ -52,12 +52,12 @@ export default function Footer() {
               <p className='mb-3 font-semibold text-white'>Legal</p>
               <ul className='text-sm text-white'>
                 <li className='mb-3'>
-                  <Link href='/' className='hover:underline'>
+                  <Link href='/privacy-policy' className='hover:underline'>
                     Privacy Policy
                   </Link>
                 </li>
                 <li className='mb-3'>
-                  <Link href='/' className='hover:underline'>
+                  <Link href='/terms-n-conditions' className='hover:underline'>
                     Terms & Conditions
                   </Link>
                 </li>
