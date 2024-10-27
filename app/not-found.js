@@ -3,6 +3,10 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
+export const metadata = {
+  title: '404',
+};
+
 export default function NotFound() {
   return (
     <BackgroundBeamsWithCollision className='min-h-[600px] w-full flex-1 flex-col px-5'>
