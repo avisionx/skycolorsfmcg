@@ -33,7 +33,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full py-3 transition-colors duration-300 ${isScrolled ? 'border-b bg-white shadow-sm' : ''}`}
+      className={`fixed top-0 z-50 w-full py-3 transition-colors duration-300 ${isScrolled ? 'bg-white/50 shadow-sm backdrop-blur-3xl' : ''}`}
     >
       <div className='mx-auto flex max-w-[1600px] items-center px-5'>
         <Link href='/'>
