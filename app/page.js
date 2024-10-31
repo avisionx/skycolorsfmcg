@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import HERO_IMG from '@/public/skycolorsfmcg-hero.webp';
 import { AuroraBackground } from '@/components/ui/aurora-background';
@@ -23,7 +22,7 @@ export default function Home() {
           <div className='h-full w-full flex-col items-center gap-5 lg:flex lg:flex-row'>
             <div className='pt-24 lg:pt-0'>
               <h1 className='text-balance text-4xl font-bold tracking-tight text-black/80 lg:text-6xl'>
-                Your Trusted Partner in Global FMCG Solutions
+                Your Trusted Partner in Global FMCG Brands
               </h1>
               <h2 className='mt-2 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8'>
                 Delivering high-quality food, non-food, and personal care
@@ -62,7 +61,7 @@ export default function Home() {
         <Vortex
           backgroundColor='rgb(0,6,9)'
           rangeY={100}
-          particleCount={100}
+          particleCount={15}
           baseHue={150}
           className='flex h-full w-full flex-col items-center justify-center px-5 py-8 text-white lg:py-16'
         >
@@ -70,65 +69,33 @@ export default function Home() {
             <p className='text-4xl font-bold'>About Us</p>
             <hr className='mb-8 mt-3 w-1/3 p-0' />
           </div>
-          <h3 className='mx-auto max-w-3xl text-center text-lg'>
-            Established in 2017, we specialize in the wholesale distribution of
-            food, non-food, and personal care products. With over 20 years of
-            experience, we have expanded globally, building long-standing
-            relationships with suppliers and customers alike.
+          <h3 className='mx-auto max-w-3xl text-center'>
+            Our story begins in 1998 in a small office in Deira, Dubai. Mr.
+            Girish Bhagtani had a vision of giving Dubai the kind of household,
+            electric and electronics business it deserved. A business that would
+            not compromise on quality and standards. He also expanded the
+            business to offer services in food , non-food and personal care
+            items.
+            <br />
+            <br />
+            Sky Colors established in 2017, specializes in the wholesale
+            distribution of food, non-food, and personal care products. With
+            over 9 years of experience, we have expanded globally, building
+            long-standing relationships with suppliers and customers alike.
           </h3>
-          <div className='mt-16 grid grid-cols-2 gap-12 lg:grid-cols-4'>
-            <motion.div
-              className='flex flex-col gap-3 text-center'
-              initial={{ opacity: 0.0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.1,
-                duration: 0.6,
-                ease: 'easeInOut',
-              }}
-            >
-              <p className='text-3xl font-bold'>25+</p>
+          <div className='mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-16'>
+            <div className='flex flex-col gap-3 text-center'>
+              <p className='text-3xl font-bold'>27+</p>
               <p>Years Experience</p>
-            </motion.div>
-            <motion.div
-              className='flex flex-col gap-3 text-center'
-              initial={{ opacity: 0.0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.2,
-                duration: 0.6,
-                ease: 'easeInOut',
-              }}
-            >
-              <p className='text-3xl font-bold'>50+</p>
+            </div>
+            <div className='flex flex-col gap-3 text-center'>
+              <p className='text-3xl font-bold'>15+</p>
               <p>Countries Global Presence</p>
-            </motion.div>
-            <motion.div
-              className='flex flex-col gap-3 text-center'
-              initial={{ opacity: 0.0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.3,
-                duration: 0.6,
-                ease: 'easeInOut',
-              }}
-            >
+            </div>
+            <div className='flex flex-col gap-3 text-center'>
               <p className='text-3xl font-bold'>1000+</p>
               <p>Products Available</p>
-            </motion.div>
-            <motion.div
-              className='flex flex-col gap-3 text-center'
-              initial={{ opacity: 0.0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.4,
-                duration: 0.6,
-                ease: 'easeInOut',
-              }}
-            >
-              <p className='text-3xl font-bold'>150+</p>
-              <p>Partners Worldwide</p>
-            </motion.div>
+            </div>
           </div>
           <div>
             <Link href='/about'>
@@ -155,14 +122,23 @@ export default function Home() {
           your everyday needs.
         </h4>
         <div className='mt-8 grid w-full grid-cols-1 gap-8 lg:grid-cols-3'>
-          <div>
+          <div className='relative flex items-center justify-center'>
             <Image src={PRODUCTS_IMG_1} alt='' className='rounded-lg' />
+            <div className='absolute rounded-lg bg-muted/70 px-12 py-3 text-center text-2xl font-semibold text-black/80'>
+              FOOD & BEVERAGE
+            </div>
           </div>
-          <div>
+          <div className='relative flex items-center justify-center'>
             <Image src={PRODUCTS_IMG_2} alt='' className='rounded-lg' />
+            <div className='absolute rounded-lg bg-muted/70 px-12 py-3 text-center text-2xl font-semibold text-black/80'>
+              HOME CARE
+            </div>
           </div>
-          <div>
+          <div className='relative flex items-center justify-center'>
             <Image src={PRODUCTS_IMG_3} alt='' className='rounded-lg' />
+            <div className='absolute rounded-lg bg-muted/70 px-12 py-3 text-center text-2xl font-semibold text-black/80'>
+              PERSONAL CARE
+            </div>
           </div>
         </div>
       </div>
