@@ -10,8 +10,6 @@ import { Vortex } from '@/components/ui/vortex';
 import PRODUCTS_IMG_1 from '@/assets/our-products/food.webp';
 import PRODUCTS_IMG_2 from '@/assets/our-products/personal-care.webp';
 import PRODUCTS_IMG_3 from '@/assets/our-products/household.webp';
-import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
-import { BackgroundLines } from '@/components/ui/background-lines';
 import { Button as MovingBorderButton } from '@/components/ui/moving-border';
 
 export default function Home() {
@@ -97,13 +95,6 @@ export default function Home() {
               <p>Products Available</p>
             </div>
           </div>
-          <div>
-            <Link href='/about'>
-              <Button variant='link' className='mt-12 px-1 py-0 text-white'>
-                Continue Reading <ArrowRight className='ml-1' />
-              </Button>
-            </Link>
-          </div>
         </Vortex>
       </div>
       <div className='mx-auto w-full max-w-[1600px] px-5 pb-20 pt-16'>
@@ -147,7 +138,7 @@ export default function Home() {
         <div className='mx-auto w-full max-w-[1600px] px-5'>
           <div className='flex flex-col items-center'>
             <p className='text-balance text-center text-4xl font-bold text-black/80'>
-              Our Trusted Partners
+              Associated Brands
             </p>
             <hr className='mb-8 mt-3 w-[100px] p-0' />
           </div>
@@ -197,21 +188,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='relative flex flex-col items-center justify-center overflow-hidden py-16 antialiased'>
-        <div className='flex flex-col items-center'>
-          <p className='text-balance px-5 text-center text-4xl font-bold text-black/80'>
-            What Our Partners Say
-          </p>
-          <hr className='mb-8 mt-3 w-1/3 p-0' />
-        </div>
-        <InfiniteMovingCards
-          items={testimonials}
-          direction='right'
-          speed='slow'
-        />
-      </div>
-      <div className='relative mx-auto mb-20 w-full max-w-[1600px] px-5'>
-        <BackgroundLines className='flex !h-auto w-full flex-col items-center justify-center rounded-2xl bg-slate-100 px-5 pb-36 pt-32 shadow-sm'>
+      <div className='relative mx-auto my-20 w-full max-w-[1600px] px-5'>
+        <div className='flex !h-auto w-full flex-col items-center justify-center rounded-2xl bg-slate-100 px-5 pb-32 pt-32 shadow-sm'>
           <p className='z-20 text-balance text-center text-4xl font-bold text-black/80'>
             Ready to Grow with Us?
           </p>
@@ -234,40 +212,9 @@ export default function Home() {
               </Button>
             </Link>
           </div>
-        </BackgroundLines>
+        </div>
       </div>
     </>
   );
 }
 
-const testimonials = [
-  {
-    quote:
-      'It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.',
-    name: 'Charles Dickens',
-    title: 'A Tale of Two Cities',
-  },
-  {
-    quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: 'William Shakespeare',
-    title: 'Hamlet',
-  },
-  {
-    quote: 'All that we see or seem is but a dream within a dream.',
-    name: 'Edgar Allan Poe',
-    title: 'A Dream Within a Dream',
-  },
-  {
-    quote:
-      'It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.',
-    name: 'Jane Austen',
-    title: 'Pride and Prejudice',
-  },
-  {
-    quote:
-      'Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.',
-    name: 'Herman Melville',
-    title: 'Moby-Dick',
-  },
-];

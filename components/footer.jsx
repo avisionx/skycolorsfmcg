@@ -17,11 +17,6 @@ export default function Footer() {
               <p className='mb-3 font-semibold text-white'>Sitemap</p>
               <ul className='text-sm text-white'>
                 <li className='mb-3'>
-                  <Link href='/about' className='hover:underline'>
-                    About
-                  </Link>
-                </li>
-                <li className='mb-3'>
                   <Link href='/products' className='hover:underline'>
                     Products
                   </Link>

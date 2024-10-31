@@ -40,11 +40,6 @@ export default function Navbar() {
           <Image src={LOGO} width={192} alt='SKY COLORS' />
         </Link>
         <div className='ml-auto hidden items-center gap-12 lg:flex'>
-          <Link href='/about'>
-            <Button className='px-1 font-bold text-black/80' variant='link'>
-              About
-            </Button>
-          </Link>
           <Link href='/products'>
             <Button className='px-1 font-bold text-black/80' variant='link'>
               Products
@@ -65,9 +60,6 @@ export default function Navbar() {
               <div className='flex flex-col gap-4 px-5 py-4'>
                 <div className='text-center'>
                   <Link href='/'>Home</Link>
-                </div>
-                <div className='text-center'>
-                  <Link href='/about'>About</Link>
                 </div>
                 <div className='text-center'>
                   <Link href='/products'>Products</Link>
