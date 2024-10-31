@@ -5,16 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import LOGO from '@/assets/sky-colors-logo.png';
 import { Button } from '@/components/ui/button';
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from '@/components/ui/drawer';
+import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 
 export default function Navbar() {

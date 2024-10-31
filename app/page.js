@@ -12,6 +12,15 @@ import PRODUCTS_IMG_2 from '@/assets/our-products/personal-care.webp';
 import PRODUCTS_IMG_3 from '@/assets/our-products/household.webp';
 import { Button as MovingBorderButton } from '@/components/ui/moving-border';
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
+
 export default function Home() {
   return (
     <>
@@ -113,27 +122,47 @@ export default function Home() {
           your everyday needs.
         </h4>
         <div className='mt-8 grid w-full grid-cols-1 gap-8 lg:grid-cols-3'>
-          <div className='relative flex items-center justify-center'>
-            <Image src={PRODUCTS_IMG_1} alt='' className='rounded-lg' />
-            <div className='absolute rounded-lg bg-muted/70 px-12 py-3 text-center text-2xl font-semibold text-black/80'>
+          <Link
+            className='group relative flex items-end justify-start overflow-hidden rounded-lg'
+            href='/products#food-n-beverage'
+          >
+            <Image
+              src={PRODUCTS_IMG_1}
+              alt=''
+              className='duration-300 group-hover:scale-105'
+            />
+            <div className='absolute w-full rounded-b-lg bg-white/30 px-12 py-3 text-center text-xl font-semibold text-black/80 backdrop-blur-sm duration-300 group-hover:py-6 group-hover:text-2xl'>
               FOOD & BEVERAGE
             </div>
-          </div>
-          <div className='relative flex items-center justify-center'>
-            <Image src={PRODUCTS_IMG_2} alt='' className='rounded-lg' />
-            <div className='absolute rounded-lg bg-muted/70 px-12 py-3 text-center text-2xl font-semibold text-black/80'>
+          </Link>
+          <Link
+            className='group relative flex items-end justify-start overflow-hidden rounded-lg'
+            href='/products#home-care'
+          >
+            <Image
+              src={PRODUCTS_IMG_2}
+              alt=''
+              className='duration-300 group-hover:scale-105'
+            />
+            <div className='absolute w-full rounded-b-lg bg-white/30 px-12 py-3 text-center text-xl font-semibold text-black/80 backdrop-blur-sm duration-300 group-hover:py-6 group-hover:text-2xl'>
               HOME CARE
             </div>
-          </div>
-          <div className='relative flex items-center justify-center'>
-            <Image src={PRODUCTS_IMG_3} alt='' className='rounded-lg' />
-            <div className='absolute rounded-lg bg-muted/70 px-12 py-3 text-center text-2xl font-semibold text-black/80'>
+          </Link>
+          <Link
+            className='group relative flex items-end justify-start overflow-hidden rounded-lg'
+            href='/products#personal-care'
+          >
+            <Image
+              src={PRODUCTS_IMG_3}
+              alt=''
+              className='duration-300 group-hover:scale-105'
+            />
+            <div className='absolute w-full rounded-b-lg bg-white/30 px-12 py-3 text-center text-xl font-semibold text-black/80 backdrop-blur-sm duration-300 group-hover:py-6 group-hover:text-2xl'>
               PERSONAL CARE
             </div>
-          </div>
+          </Link>
         </div>
       </div>
-
       <div className='bg-muted pb-20 pt-16'>
         <div className='mx-auto w-full max-w-[1600px] px-5'>
           <div className='flex flex-col items-center'>
@@ -142,54 +171,37 @@ export default function Home() {
             </p>
             <hr className='mb-8 mt-3 w-[100px] p-0' />
           </div>
-          <div className='grid grid-cols-2 justify-center gap-6 md:grid-cols-3 lg:grid-cols-6'>
-            <Image
-              src='https://picsum.photos/300/200'
-              alt=''
-              width={150}
-              height={100}
-              className='w-full rounded-lg'
-            />
-            <Image
-              src='https://picsum.photos/300/200'
-              alt=''
-              width={150}
-              height={100}
-              className='w-full rounded-lg'
-            />
-            <Image
-              src='https://picsum.photos/300/200'
-              alt=''
-              width={150}
-              height={100}
-              className='w-full rounded-lg'
-            />
-            <Image
-              src='https://picsum.photos/300/200'
-              alt=''
-              width={150}
-              height={100}
-              className='w-full rounded-lg'
-            />
-            <Image
-              src='https://picsum.photos/300/200'
-              alt=''
-              width={150}
-              height={100}
-              className='w-full rounded-lg'
-            />
-            <Image
-              src='https://picsum.photos/300/200'
-              alt=''
-              width={150}
-              height={100}
-              className='w-full rounded-lg'
-            />
-          </div>
+          <Carousel
+            className='w-full'
+            opts={{ loop: true, dragFree: true }}
+            plugins={[Autoplay({ delay: 2000, stopOnMouseEnter: true })]}
+          >
+            <CarouselContent className='-ml-1'>
+              {Array.from({ length: 12 }).map((_, index) => (
+                <CarouselItem
+                  key={index}
+                  className='pl-1 md:basis-1/3 lg:basis-1/5'
+                >
+                  <div className='p-1'>
+                    <Image
+                      src={`https://picsum.photos/seed/${index}/300/200.webp`}
+                      alt=''
+                      width={150}
+                      height={100}
+                      className='w-full rounded-lg'
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className='left-4 size-10 border-0 bg-white/20 text-white backdrop-blur-sm' />
+            <CarouselNext className='right-4 size-10 border-0 bg-white/20 text-white backdrop-blur-sm' />
+          </Carousel>
         </div>
       </div>
       <div className='relative mx-auto my-20 w-full max-w-[1600px] px-5'>
-        <div className='flex !h-auto w-full flex-col items-center justify-center rounded-2xl bg-slate-100 px-5 pb-32 pt-32 shadow-sm'>
+        <div className='flex !h-auto w-full flex-col items-center justify-center overflow-hidden rounded-2xl bg-slate-100 px-5 pb-32 pt-32 shadow-sm bg-dot-black/[0.2]'>
+          <div className='pointer-events-none absolute inset-0 mx-5 flex items-center justify-center rounded-lg bg-slate-100 [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]'></div>
           <p className='z-20 text-balance text-center text-4xl font-bold text-black/80'>
             Ready to Grow with Us?
           </p>
