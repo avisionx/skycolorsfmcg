@@ -7,9 +7,6 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { Vortex } from '@/components/ui/vortex';
-import PRODUCTS_IMG_1 from '@/assets/our-products/food.webp';
-import PRODUCTS_IMG_2 from '@/assets/our-products/personal-care.webp';
-import PRODUCTS_IMG_3 from '@/assets/our-products/household.webp';
 import { Button as MovingBorderButton } from '@/components/ui/moving-border';
 
 import {
@@ -20,6 +17,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
+import { productsCatalogue } from '@/lib/constants';
 
 export default function Home() {
   return (
@@ -122,45 +120,22 @@ export default function Home() {
           your everyday needs.
         </h4>
         <div className='mt-8 grid w-full grid-cols-1 gap-8 lg:grid-cols-3'>
-          <Link
-            className='group relative flex items-end justify-start overflow-hidden rounded-lg'
-            href='/products#food-n-beverage'
-          >
-            <Image
-              src={PRODUCTS_IMG_1}
-              alt=''
-              className='duration-300 group-hover:scale-105'
-            />
-            <div className='absolute w-full rounded-b-lg bg-white/30 px-12 py-3 text-center text-xl font-semibold text-black/80 backdrop-blur-sm duration-300 group-hover:py-6 group-hover:text-2xl'>
-              FOOD & BEVERAGE
-            </div>
-          </Link>
-          <Link
-            className='group relative flex items-end justify-start overflow-hidden rounded-lg'
-            href='/products#home-care'
-          >
-            <Image
-              src={PRODUCTS_IMG_2}
-              alt=''
-              className='duration-300 group-hover:scale-105'
-            />
-            <div className='absolute w-full rounded-b-lg bg-white/30 px-12 py-3 text-center text-xl font-semibold text-black/80 backdrop-blur-sm duration-300 group-hover:py-6 group-hover:text-2xl'>
-              HOME CARE
-            </div>
-          </Link>
-          <Link
-            className='group relative flex items-end justify-start overflow-hidden rounded-lg'
-            href='/products#personal-care'
-          >
-            <Image
-              src={PRODUCTS_IMG_3}
-              alt=''
-              className='duration-300 group-hover:scale-105'
-            />
-            <div className='absolute w-full rounded-b-lg bg-white/30 px-12 py-3 text-center text-xl font-semibold text-black/80 backdrop-blur-sm duration-300 group-hover:py-6 group-hover:text-2xl'>
-              PERSONAL CARE
-            </div>
-          </Link>
+          {productsCatalogue.map(({ id, imageSrc, label }) => (
+            <Link
+              key={id}
+              href={`/products?type=${id}`}
+              className='group relative flex items-end justify-start overflow-hidden rounded-lg'
+            >
+              <Image
+                src={imageSrc}
+                alt={label}
+                className='duration-300 group-hover:scale-105'
+              />
+              <div className='absolute w-full rounded-b-lg bg-white/30 px-12 py-3 text-center text-xl font-semibold text-black/80 backdrop-blur-sm duration-300 group-hover:py-6 group-hover:text-2xl'>
+                {label}
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
       <div className='bg-muted pb-20 pt-16'>
