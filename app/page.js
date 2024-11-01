@@ -40,7 +40,7 @@ export default function Home() {
                   <MovingBorderButton
                     borderRadius='0.75rem'
                     className='border-none bg-[#3ab4e7] bg-gradient-to-r from-[#3ab4e7] to-[#016da2] p-2 text-[14px] font-bold text-white hover:bg-[#3ab4e7]/90 hover:opacity-90'
-                    containerClassName='h-12 w-52'
+                    containerClassName='h-12 w-44 lg:w-52'
                   >
                     Get in Touch
                   </MovingBorderButton>
