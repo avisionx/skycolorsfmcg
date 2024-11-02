@@ -71,10 +71,10 @@ export default function Home() {
           className='flex h-full w-full flex-col items-center justify-center px-5 py-8 text-white lg:py-16'
         >
           <div className='flex flex-col items-center'>
-            <p className='text-4xl font-bold'>About Us</p>
+            <h3 className='text-4xl font-bold'>About Us</h3>
             <hr className='mb-8 mt-3 w-1/3 p-0' />
           </div>
-          <h3 className='mx-auto max-w-3xl text-center'>
+          <h4 className='mx-auto max-w-3xl text-center'>
             Our story begins in 1998 in a small office in Deira, Dubai. Mr.
             Girish Bhagtani had a vision of giving Dubai the kind of household,
             electric and electronics business it deserved. A business that would
@@ -87,26 +87,26 @@ export default function Home() {
             distribution of food, non-food, and personal care products. With
             over 9 years of experience, we have expanded globally, building
             long-standing relationships with suppliers and customers alike.
-          </h3>
+          </h4>
           <div className='mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-16'>
-            <div className='flex flex-col gap-3 text-center'>
+            <h5 className='flex flex-col gap-3 text-center'>
               <p className='text-3xl font-bold'>27+</p>
               <p>Years Experience</p>
-            </div>
-            <div className='flex flex-col gap-3 text-center'>
+            </h5>
+            <h5 className='flex flex-col gap-3 text-center'>
               <p className='text-3xl font-bold'>15+</p>
               <p>Countries Global Presence</p>
-            </div>
-            <div className='flex flex-col gap-3 text-center'>
+            </h5>
+            <h5 className='flex flex-col gap-3 text-center'>
               <p className='text-3xl font-bold'>1000+</p>
               <p>Products Available</p>
-            </div>
+            </h5>
           </div>
         </Vortex>
       </div>
       <div className='mx-auto w-full max-w-[1600px] px-5 pb-20 pt-16'>
         <div className='flex items-center'>
-          <p className='text-4xl font-bold text-black/80'>Our Products</p>
+          <h3 className='text-4xl font-bold text-black/80'>Our Products</h3>
           <Link href='/products' className='ml-auto'>
             <Button variant='link' className='p-1 px-6 py-3 pr-0 font-bold'>
               View All <ArrowRight className='ml-1' />
@@ -178,12 +178,12 @@ export default function Home() {
       <div className='relative mx-auto mb-20 w-full max-w-[1600px] px-5'>
         <div className='flex !h-auto w-full flex-col items-center justify-center overflow-hidden rounded-2xl bg-slate-100 px-5 pb-32 pt-32 shadow-sm bg-dot-black/[0.2]'>
           <div className='pointer-events-none absolute inset-0 mx-5 flex items-center justify-center rounded-lg bg-slate-100 [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]'></div>
-          <p className='z-20 text-balance text-center text-4xl font-bold text-black/80'>
+          <h3 className='z-20 text-balance text-center text-4xl font-bold text-black/80'>
             Ready to Grow with Us?
-          </p>
-          <p className='z-20 mt-2 text-pretty text-center font-medium text-gray-500'>
+          </h3>
+          <h4 className='z-20 mt-2 text-pretty text-center font-medium text-gray-500'>
             Partner with SKY COLORS FMCG today for all your FMCG needs.
-          </p>
+          </h4>
           <div className='z-20 mt-10 grid grid-cols-1 items-center gap-6 text-center lg:grid-cols-2'>
             <Link href='/contact-us'>
               <MovingBorderButton
