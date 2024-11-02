@@ -1,6 +1,9 @@
 'use client';
 
-import { productsCatalogue } from '@/lib/constants';
+import {
+  productsCatalogue,
+  productsCatalogueImageCounts,
+} from '@/lib/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
@@ -27,18 +30,23 @@ export default function ProductCatalogue() {
           </div>
         ))}
       </div>
-      <div className='grid gap-4 pt-8 md:grid-cols-2 lg:grid-cols-4'>
-        {Array.from({ length: 12 }).map((_, index) => (
-          <div className='rounded-lg' key={`${type}-${index}`}>
-            <Image
-              src={`https://picsum.photos/seed/${type}-${index}/300/200.webp`}
-              alt=''
-              width={150}
-              height={100}
-              className='w-full rounded-lg'
-            />
-          </div>
-        ))}
+      <div className='grid grid-cols-2 gap-12 pt-8 lg:grid-cols-5'>
+        {Array.from({ length: productsCatalogueImageCounts[type] }).map(
+          (_, index) => (
+            <div
+              className='flex items-center justify-center rounded-lg p-6'
+              key={`${type}-${index}`}
+            >
+              <Image
+                src={`/products/${type}/${index + 1}.webp`}
+                alt=''
+                width={150}
+                height={100}
+                className='w-full rounded-lg'
+              />
+            </div>
+          )
+        )}
       </div>
     </>
   );
