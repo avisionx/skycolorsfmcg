@@ -39,7 +39,7 @@ export default function ProductCatalogue() {
             >
               <Image
                 src={`/products/${type}/${index + 1}.webp`}
-                alt=''
+                alt={`${type} type product image - ${index + 1}`}
                 width={150}
                 height={100}
                 className='w-full rounded-lg'

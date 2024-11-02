@@ -56,7 +56,7 @@ export default function Home() {
                 width={400}
                 height={400}
                 className='w-full rounded-lg lg:ml-auto lg:w-10/12'
-                alt=''
+                alt='skycolors-main-banner'
               />
             </div>
           </div>
