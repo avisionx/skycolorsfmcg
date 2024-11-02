@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 const domain = 'https://skycolorsfmcg.com';
 
 export default function Sitemap() {
