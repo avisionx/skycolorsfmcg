@@ -138,7 +138,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className='bg-muted pb-20 pt-16'>
+      {/* <div className='bg-muted pb-20 pt-16'>
         <div className='mx-auto w-full max-w-[1600px] px-5'>
           <div className='flex flex-col items-center'>
             <p className='text-balance text-center text-4xl font-bold text-black/80'>
@@ -173,8 +173,9 @@ export default function Home() {
             <CarouselNext className='right-4 size-10 border-0 bg-white/20 text-white backdrop-blur-sm' />
           </Carousel>
         </div>
-      </div>
-      <div className='relative mx-auto my-20 w-full max-w-[1600px] px-5'>
+      </div> */}
+      {/* Also set mb-20 to my-20 when uncommenting above */}
+      <div className='relative mx-auto mb-20 w-full max-w-[1600px] px-5'>
         <div className='flex !h-auto w-full flex-col items-center justify-center overflow-hidden rounded-2xl bg-slate-100 px-5 pb-32 pt-32 shadow-sm bg-dot-black/[0.2]'>
           <div className='pointer-events-none absolute inset-0 mx-5 flex items-center justify-center rounded-lg bg-slate-100 [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]'></div>
           <p className='z-20 text-balance text-center text-4xl font-bold text-black/80'>
