@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import LOGO from '@/assets/sky-colors-logo.png';
+import LOGO from '@/assets/sky-colors-logo.webp';
 import { Button } from '@/components/ui/button';
 import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
@@ -28,7 +28,7 @@ export default function Navbar() {
     >
       <div className='mx-auto flex max-w-[1600px] items-center px-5'>
         <Link href='/'>
-          <Image src={LOGO} width={192} alt='SKY COLORS' />
+          <Image src={LOGO} width={200} alt='SKY COLORS' />
         </Link>
         <div className='ml-auto hidden items-center gap-12 lg:flex'>
           <Link href='/products'>

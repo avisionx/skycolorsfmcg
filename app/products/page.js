@@ -11,7 +11,7 @@ export default function Products() {
     <>
       <PageHeader text='Our Products' />
       <div className='mx-auto w-full max-w-[1600px] px-5 pb-32 pt-12'>
-        <Suspense>
+        <Suspense fallback={<div className='min-h-[60dvh]'></div>}>
           <ProductCatalogue />
         </Suspense>
       </div>

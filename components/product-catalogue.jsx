@@ -19,7 +19,7 @@ export default function ProductCatalogue() {
               className={`text-pretty px-3 pb-2 duration-300 ${id === type ? 'border-b-4 border-[#016da2]' : ''}`}
             >
               <span
-                className={`bg-gradient-to-t from-black/60 to-black duration-300 ${id === type ? 'from-[#016da2]' : ''} bg-clip-text text-center text-2xl font-bold tracking-tight text-transparent`}
+                className={`bg-gradient-to-t ${id === type ? 'from-[#016da2]' : 'from-black/60'} to-black bg-clip-text text-center text-2xl font-bold tracking-tight text-transparent duration-300`}
               >
                 {label}
               </span>
