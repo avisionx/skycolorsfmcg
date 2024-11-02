@@ -30,7 +30,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <head>
-        <meta name="google-site-verification" content="Em7XUv6ApEODu2D8GMUkWqQ-CmD4HltkQyYna7JnxyM" />
+        <meta
+          name='google-site-verification'
+          content='Em7XUv6ApEODu2D8GMUkWqQ-CmD4HltkQyYna7JnxyM'
+        />
       </head>
       <body
         className={`${font.className} flex min-h-[100dvh] flex-col antialiased`}
