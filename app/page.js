@@ -138,7 +138,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      {/* <div className='bg-muted pb-20 pt-16'>
+      <div className='bg-muted pb-20 pt-16'>
         <div className='mx-auto w-full max-w-[1600px] px-5'>
           <div className='flex flex-col items-center'>
             <p className='text-balance text-center text-4xl font-bold text-black/80'>
@@ -152,14 +152,14 @@ export default function Home() {
             plugins={[Autoplay({ delay: 2000, stopOnMouseEnter: true })]}
           >
             <CarouselContent className='-ml-1'>
-              {Array.from({ length: 12 }).map((_, index) => (
+              {Array.from({ length: 9 }).map((_, index) => (
                 <CarouselItem
                   key={index}
                   className='pl-1 md:basis-1/3 lg:basis-1/5'
                 >
-                  <div className='p-1'>
+                  <div className='flex h-full items-center justify-center p-6'>
                     <Image
-                      src={`https://picsum.photos/seed/${index}/300/200.webp`}
+                      src={`/brands/${index + 1}.webp`}
                       alt=''
                       width={150}
                       height={100}
@@ -169,13 +169,12 @@ export default function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className='left-4 size-10 border-0 bg-white/20 text-white backdrop-blur-sm' />
-            <CarouselNext className='right-4 size-10 border-0 bg-white/20 text-white backdrop-blur-sm' />
+            <CarouselPrevious className='left-4 size-10 border-0 bg-white/20 text-black backdrop-blur-sm' />
+            <CarouselNext className='right-4 size-10 border-0 bg-white/20 text-black backdrop-blur-sm' />
           </Carousel>
         </div>
-      </div> */}
-      {/* Also set mb-20 to my-20 when uncommenting above */}
-      <div className='relative mx-auto mb-20 w-full max-w-[1600px] px-5'>
+      </div>
+      <div className='relative mx-auto my-20 w-full max-w-[1600px] px-5'>
         <div className='flex !h-auto w-full flex-col items-center justify-center overflow-hidden rounded-2xl bg-slate-100 px-5 pb-32 pt-32 shadow-sm bg-dot-black/[0.2]'>
           <div className='pointer-events-none absolute inset-0 mx-5 flex items-center justify-center rounded-lg bg-slate-100 [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]'></div>
           <h3 className='z-20 text-balance text-center text-4xl font-bold text-black/80'>

@@ -78,7 +78,10 @@ export default function ContactUs() {
             </h2>
             <p className='ml-10 mt-1 text-lg text-black/80'>
               Click{' '}
-              <Link className='underline' href='https://wa.me/+971509697243'>
+              <Link
+                className='underline'
+                href='https://wa.me/+971509697243?text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20the%20availability%20of%20certain%20FMCG%20products.%20Can%20you%20help%20me%20with%20product%20options%20and%20pricing%3F'
+              >
                 here
               </Link>{' '}
               to chat on WhatsApp.
