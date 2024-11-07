@@ -57,12 +57,13 @@ export default function Home() {
                 height={400}
                 className='w-full rounded-lg lg:ml-auto lg:w-10/12'
                 alt='skycolors-main-banner'
+                priority
               />
             </div>
           </div>
         </div>
       </AuroraBackground>
-      <div className='overflow-hidden'>
+      <div className='min-h-[30vh] overflow-hidden bg-[#003047]'>
         <Vortex
           backgroundColor='rgb(0,6,9)'
           rangeY={100}
