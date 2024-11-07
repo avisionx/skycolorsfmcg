@@ -19,7 +19,7 @@ export default function ContactUs() {
             height='100%'
             style={{ border: 0 }}
             allowFullScreen
-            loading='lazy'
+            loading='eager'
             referrerPolicy='no-referrer-when-downgrade'
             title='Sky Colors FMCG'
           />

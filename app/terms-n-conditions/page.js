@@ -9,7 +9,7 @@ export default function Terms() {
   return (
     <>
       <PageHeader text='Terms & Conditions' />
-      <div className='mx-auto w-full max-w-[1600px] px-5 pb-32 pt-12'>
+      <div className='mx-auto w-full max-w-[1600px] px-5 pb-32 pt-4'>
         <p className='mb-4'>
           Welcome to SKY COLORS FMCG. By accessing or using our website, you
           agree to comply with these terms and conditions.

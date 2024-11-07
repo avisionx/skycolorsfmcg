@@ -28,7 +28,7 @@ export default function Navbar() {
     >
       <div className='mx-auto flex max-w-[1600px] items-center px-5'>
         <Link href='/'>
-          <Image src={LOGO} width={200} alt='SKY COLORS FMCG' />
+          <Image src={LOGO} width={200} alt='SKY COLORS FMCG' priority />
         </Link>
         <div className='ml-auto hidden items-center gap-12 lg:flex'>
           <Link href='/products'>

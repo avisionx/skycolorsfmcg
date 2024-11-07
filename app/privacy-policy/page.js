@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
   return (
     <>
       <PageHeader text='Privacy Policy' />
-      <div className='mx-auto w-full max-w-[1600px] px-5 pb-32 pt-12'>
+      <div className='mx-auto w-full max-w-[1600px] px-5 pb-32 pt-4'>
         <p className='mb-4'>
           At SKY COLORS FMCG, we are committed to protecting your privacy. This
           privacy policy explains how we collect, use, and safeguard your
