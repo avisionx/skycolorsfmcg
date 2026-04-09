@@ -54,8 +54,8 @@ export default function ContactUs() {
             </h2>
             <p className='ml-10 mt-1 text-lg text-black/80'>
               Shoot us an email at{' '}
-              <Link className='underline' href='mailto:trio@eim.ae'>
-                trio@eim.ae
+              <Link className='underline' href='mailto:info@skycolorsfmcg.com'>
+                info@skycolorsfmcg.com
               </Link>
               .
             </p>
